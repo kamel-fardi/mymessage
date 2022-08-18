@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:mymessage/screens/Chat_Screen.dart';
+import 'package:mymessage/screens/Sign_In.dart';
+import '../screens/Welcome_Screen.dart';
+import 'screens/Registration_Screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,58 +14,19 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
+      title: 'MessageMe app',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
-
-  final String title;
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headline4,
-            ),
-          ],
-        ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ),
+          colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.pink)
+              .copyWith(secondary: Colors.deepOrange)),
+      //home: ChatScreen(),
+      initialRoute: WelcomeScreen.welcomeScreen,
+      routes: {
+        WelcomeScreen.welcomeScreen: (context) => const WelcomeScreen(),
+        SignIn.signIn: (context) => SignIn(),
+        ChatScreen.chatScreen: (context) => ChatScreen(),
+        ResgisterScreen.registrationScreen: (context) => ResgisterScreen(),
+      },
     );
   }
 }
