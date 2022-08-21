@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "618330800233",
+    "project_id": "messageme-app-99bbe",
+    "storage_bucket": "messageme-app-99bbe.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:618330800233:android:91e109e450b9771fdba2f8",
+        "android_client_info": {
+          "package_name": "com.kamel_fardi.mymessage"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "618330800233-fjvac7eucm2qrtt91u53k3jth0nm1e5d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB-od4wdqgdXgwU1dc8ZJFTzW7D5FeLDN4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "618330800233-fjvac7eucm2qrtt91u53k3jth0nm1e5d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
